@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "742012613581",
+    "project_id": "vidyutrenz-bff3c",
+    "storage_bucket": "vidyutrenz-bff3c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:742012613581:android:49e1b9e46f2283821aca84",
+        "android_client_info": {
+          "package_name": "com.vidyutrenz.vidyutrenz_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "742012613581-4l28e1bbkgahe9psd8gnl8m9hs049ut2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.vidyutrenz.vidyutrenz_app",
+            "certificate_hash": "44ca451797ff1e503c05cf15421388d02a336c27"
+          }
+        },
+        {
+          "client_id": "742012613581-e3chi8o030c8gmlfvnm78dsetj4lu9ia.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAeFmLL7mYNh0_v5JdQtiUnA_3NDElAZeA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "742012613581-e3chi8o030c8gmlfvnm78dsetj4lu9ia.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
