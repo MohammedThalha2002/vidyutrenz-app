@@ -1,6 +1,9 @@
+import 'dart:convert';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
+import 'package:http/http.dart' as http;
 
 class UnseenMsgController extends GetxController {
   var seenMsg = 0.obs;
@@ -18,13 +21,26 @@ class UnseenMsgController extends GetxController {
   // Getting the value of seen from each user
   Future findNoOfseenMsg() async {
     // Finding the number of seen msg
-    var Usercollection = FirebaseFirestore.instance.collection('UserDetails');
-    var UserdocSnapshot = await Usercollection.doc(user!.uid).get();
 
-    Map<String, dynamic>? data = UserdocSnapshot.data();
-    seenMsg.value = data?['seenMsg'];
+    Map<String, String> userUID = {"user": user!.uid};
 
-    print("Number of seen messages = " + seenMsg.toString());
+    try {
+      var url = Uri.parse("http://192.168.0.112:6060/seen-msg");
+      var response = await http.post(
+        url,
+        body: jsonEncode(userUID),
+        headers: {
+          "Content-Type": "application/json; charset=UTF-8",
+        },
+      );
+      var seenMsgValue = jsonDecode(response.body);
+      print(seenMsgValue);
+      seenMsg.value = seenMsgValue.seenMsg;
+      print("Number of seen messages = " + seenMsg.toString());
+    } on Exception catch (e) {
+      // TODO
+      print(e);
+    }
     NumberOfProclaimDocs();
   }
 
@@ -43,10 +59,19 @@ class UnseenMsgController extends GetxController {
     print("Unseen Value = " + Unseen.value.toString());
   }
 
-  AssignTheValueOfSeenMsgToDocumentSize() {
-    FirebaseFirestore.instance.collection("UserDetails").doc(user!.uid).update({
-      "seenMsg": NumberOfProcliamDocuments.value,
-    });
+  AssignTheValueOfSeenMsgToDocumentSize() async {
+    Map<String, dynamic> data = {
+      "user": user!.uid,
+      "seenMsg": NumberOfProcliamDocuments.value
+    };
+    var url = Uri.parse("http://192.168.0.112:6060/update-seen-msg");
+    var response = await http.post(
+      url,
+      body: jsonEncode(data),
+      headers: {
+        "Content-Type": "application/json; charset=UTF-8",
+      },
+    );
     seenMsg.value = NumberOfProcliamDocuments.value;
     findNoOfseenMsg();
   }

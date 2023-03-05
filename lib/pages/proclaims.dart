@@ -76,7 +76,12 @@ class _ProclaimsState extends State<Proclaims> {
                 }
                 if (snapshot.data!.docs.length == 0) {
                   return Center(
-                    child: Text('No announcements left'),
+                    child: Text(
+                      'No announcements left',
+                      style: TextStyle(
+                        color: Colors.white,
+                      ),
+                    ),
                   );
                 }
 

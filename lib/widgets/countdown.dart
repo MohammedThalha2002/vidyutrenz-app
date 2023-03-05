@@ -55,9 +55,9 @@ class _countdownState extends State<countdown> {
                 SizedBox(
                   width: MediaQuery.of(context).size.width * 0.55,
                   child: FittedBox(
-                    fit: BoxFit.fitWidth, 
+                    fit: BoxFit.fitWidth,
                     child: CountDownText(
-                      due: DateTime.utc(2022, 05, 28),
+                      due: DateTime.utc(2023, 03, 23),
                       finishedText: "00 : 00 : 00 : 00",
                       showLabel: true,
                       longDateName: true,

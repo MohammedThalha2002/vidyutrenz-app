@@ -105,22 +105,33 @@ class _SignUpState extends State<SignUp> {
                       yearController.text.isNotEmpty &&
                       phoneController.text.isNotEmpty) {
                     try {
-                      signInWithGoogle().then((value) {
+                      signInWithGoogle().then((value) async {
                         if (value != null) {
-                          Get.to(
-                            HomePage(),
-                            transition: Transition.native,
-                            duration: Duration(milliseconds: 600),
-                          );
-                          UploadUserDetails(userDetails: {
+                          int statusCode =
+                              await UploadUserDetails(userDetails: {
                             "name": value.user!.displayName,
                             "email": value.user!.email,
-                            "phone": phoneController.text,
+                            "phone": int.parse(phoneController.text),
                             "collage": clgController.text,
                             "department": depController.text,
                             "year": yearController.text,
                             "seenMsg": 0,
                           });
+                          if (statusCode == 200) {
+                            Get.to(
+                              HomePage(),
+                              transition: Transition.native,
+                              duration: Duration(milliseconds: 600),
+                            );
+                          } else {
+                            Get.snackbar(
+                              "Error",
+                              "Failed to save. Please try again",
+                              snackPosition: SnackPosition.TOP,
+                              colorText: Colors.white,
+                              backgroundColor: Colors.redAccent,
+                            );
+                          }
                         } else {
                           Get.snackbar(
                             "Error",
