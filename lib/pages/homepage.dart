@@ -6,7 +6,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_advanced_drawer/flutter_advanced_drawer.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import '../constants/colors.dart';
+import 'package:vidyutrenz_app/constants/colors.dart';
 import 'package:vidyutrenz_app/models/homeBoxModels.dart';
 import 'package:vidyutrenz_app/pages/events.dart';
 import 'package:vidyutrenz_app/pages/feedback.dart';

@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'package:vidyutrenz_app/constants/credentials.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:http/http.dart' as http;
@@ -11,7 +10,7 @@ Future<int> UploadUserDetails({required Map<String, dynamic> userDetails}) async
   print(userDetails);
 
   try {
-    var url = Uri.parse('${cred.url}/add_user');
+    var url = Uri.parse('https://vidyutrenz-backend.onrender.com/add_user');
     var response = await http.post(
       url,
       body: jsonEncode(userDetails),
@@ -19,6 +18,7 @@ Future<int> UploadUserDetails({required Map<String, dynamic> userDetails}) async
         "Content-Type": "application/json; charset=UTF-8",
       },
     );
+    print("Status COde : " + response.statusCode.toString());
     return response.statusCode;
   } on Exception catch (e) {
     // TODO

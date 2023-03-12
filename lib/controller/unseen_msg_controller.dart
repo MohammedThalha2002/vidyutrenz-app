@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'package:vidyutrenz_app/constants/credentials.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
@@ -25,7 +24,7 @@ class UnseenMsgController extends GetxController {
     Map<String, String> userUID = {"user": user!.uid};
 
     try {
-      var url = Uri.parse("${cred.url}/seen-msg");
+      var url = Uri.parse('https://vidyutrenz-backend.onrender.com/seen-msg');
       var response = await http.post(
         url,
         body: jsonEncode(userUID),
@@ -34,12 +33,12 @@ class UnseenMsgController extends GetxController {
         },
       );
       var seenMsgValue = jsonDecode(response.body);
-      print(seenMsgValue);
-      seenMsg.value = seenMsgValue.seenMsg;
+      print("SEEN MESSAGES : " + seenMsgValue['seenMsg'].toString());
+      seenMsg.value = seenMsgValue['seenMsg'];
       print("Number of seen messages = " + seenMsg.toString());
     } on Exception catch (e) {
       // TODO
-      print(e);
+      print("1) ERROR IN POSTING DATA TO THE MONGODB " + e.toString());
     }
     NumberOfProclaimDocs();
   }
@@ -59,14 +58,20 @@ class UnseenMsgController extends GetxController {
 
   AssignTheValueOfSeenMsgToDocumentSize() async {
     Map<String, dynamic> data = {"user": user!.uid, "seenMsg": NumberOfProcliamDocuments.value};
-    var url = Uri.parse('${cred.url}/update-seen-msg');
-    var response = await http.post(
-      url,
-      body: jsonEncode(data),
-      headers: {
-        "Content-Type": "application/json; charset=UTF-8",
-      },
-    );
+    var url = Uri.parse('https://vidyutrenz-backend.onrender.com/update-seen-msg');
+    try {
+      var response = await http.post(
+        url,
+        body: jsonEncode(data),
+        headers: {
+          "Content-Type": "application/json; charset=UTF-8",
+        },
+      );
+      print("SUCCESSFULLY UPDATED THE SEEN MSG TO MONGODB");
+    } on Exception catch (e) {
+      // TODO
+      print("2) ERROR IN POSTING DATA TO THE MONGODB " + e.toString());
+    }
     seenMsg.value = NumberOfProcliamDocuments.value;
     findNoOfseenMsg();
   }

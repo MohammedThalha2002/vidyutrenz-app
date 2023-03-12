@@ -66,12 +66,12 @@ class _ProclaimsState extends State<Proclaims> {
             ),
             StreamBuilder(
               stream: ProclaimsStream,
-              builder: ((context, AsyncSnapshot<QuerySnapshot> snapshot) {
-                print("PROCLAIMS LENGTH : " + snapshot.data!.docs.length.toString());
+              builder: (context, AsyncSnapshot<QuerySnapshot> snapshot) {
+                // print("PROCLAIMS LENGTH : " + snapshot.data!.docs.length.toString());
                 if (snapshot.hasError) {
                   return Text('Something went wrong');
                 }
-                if (snapshot.data!.docs.length == 0) {
+                if (!snapshot.hasData) {
                   return Center(
                     child: Text(
                       'No announcements left',
@@ -99,7 +99,7 @@ class _ProclaimsState extends State<Proclaims> {
                     );
                   }),
                 );
-              }),
+              },
             ),
           ]),
         ),

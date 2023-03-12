@@ -44,8 +44,8 @@ class ImageLoaderGallery extends StatelessWidget {
             tag: images[index],
             child: ClipRRect(
               borderRadius: BorderRadius.circular(12),
-              child: Image.asset(
-                'assets/gallery/' + images[index],
+              child: Image.network(
+                images[index],
                 fit: BoxFit.fill,
               ),
             ),
@@ -90,8 +90,8 @@ class _ImageExpansionState extends State<ImageExpansion> {
               tag: widget.imageUrl,
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(12),
-                child: Image.asset(
-                  'assets/gallery/' + widget.imageUrl[widget.index],
+                child: Image.network(
+                  widget.imageUrl[widget.index],
                   fit: BoxFit.fill,
                 ),
               ),

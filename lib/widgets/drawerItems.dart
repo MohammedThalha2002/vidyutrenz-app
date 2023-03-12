@@ -146,25 +146,25 @@ class _DrawerItemsState extends State<DrawerItems> {
                   ),
                 ),
               ),
-              ListTile(
-                onTap: () {
-                  Get.to(
-                    AdminHomePage(),
-                    transition: Transition.native,
-                    duration: Duration(milliseconds: 600),
-                  );
-                },
-                leading: Icon(
-                  FontAwesomeIcons.person,
-                  color: Colors.white,
-                ),
-                title: Text(
-                  'Admin',
-                  style: TextStyle(
-                    fontSize: 22,
-                  ),
-                ),
-              ),
+              // ListTile(
+              //   onTap: () {
+              //     Get.to(
+              //       AdminHomePage(),
+              //       transition: Transition.native,
+              //       duration: Duration(milliseconds: 600),
+              //     );
+              //   },
+              //   leading: Icon(
+              //     FontAwesomeIcons.person,
+              //     color: Colors.white,
+              //   ),
+              //   title: Text(
+              //     'Admin',
+              //     style: TextStyle(
+              //       fontSize: 22,
+              //     ),
+              //   ),
+              // ),
               ListTile(
                 onTap: () {
                   showDialogToLogout();
