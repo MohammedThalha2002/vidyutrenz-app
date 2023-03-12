@@ -1,7 +1,7 @@
 import 'package:confetti/confetti.dart';
 import 'package:flutter/material.dart';
 import 'package:vidyutrenz_app/backend/feedback_upload.dart';
-import 'package:vidyutrenz_app/colors.dart';
+import 'package:vidyutrenz_app/constants/colors.dart';
 import 'package:get/get.dart';
 import 'package:vidyutrenz_app/pages/homepage.dart';
 import 'package:vidyutrenz_app/widgets/titles.dart';

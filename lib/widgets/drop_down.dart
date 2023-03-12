@@ -1,7 +1,7 @@
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:vidyutrenz_app/colors.dart';
+import 'package:vidyutrenz_app/constants/colors.dart';
 import 'package:vidyutrenz_app/controller/year_value_controller.dart';
 
 class DropdownForYearSelection extends StatelessWidget {

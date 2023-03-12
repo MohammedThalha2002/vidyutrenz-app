@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:vidyutrenz_app/widgets/titles.dart';
-import 'package:vidyutrenz_app/colors.dart';
+import 'package:vidyutrenz_app/constants/colors.dart';
 
 class AboutPage extends StatelessWidget {
   const AboutPage({Key? key}) : super(key: key);

@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:vidyutrenz_app/colors.dart';
+import 'package:vidyutrenz_app/constants/colors.dart';
 import 'package:vidyutrenz_app/controller/event_selector_controller.dart';
 import 'package:vidyutrenz_app/models/eventsExpansionModels.dart';
 import 'package:vidyutrenz_app/models/non_tech_events.dart';

@@ -1,5 +1,5 @@
 import 'package:date_count_down/date_count_down.dart';
-import 'package:vidyutrenz_app/colors.dart';
+import 'package:vidyutrenz_app/constants/colors.dart';
 import 'package:flutter/material.dart';
 
 import 'clock.dart';
@@ -18,17 +18,14 @@ class _countdownState extends State<countdown> {
     return Container(
       height: 160,
       width: widget.size.width,
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20),
-          color: colors.containerColor,
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black.withOpacity(0.2),
-              spreadRadius: 1,
-              blurRadius: 4,
-              offset: Offset(4, 4), // changes position of shadow
-            ),
-          ]),
+      decoration: BoxDecoration(borderRadius: BorderRadius.circular(20), color: colors.containerColor, boxShadow: [
+        BoxShadow(
+          color: Colors.black.withOpacity(0.2),
+          spreadRadius: 1,
+          blurRadius: 4,
+          offset: Offset(4, 4), // changes position of shadow
+        ),
+      ]),
       child: Padding(
         padding: const EdgeInsets.only(left: 12, top: 12, right: 10),
         child: Column(

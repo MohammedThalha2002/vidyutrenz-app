@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:vidyutrenz_app/colors.dart';
+import 'package:vidyutrenz_app/constants/colors.dart';
 
 class TitleWidget extends StatelessWidget {
   final String img;
@@ -22,9 +22,7 @@ class TitleWidget extends StatelessWidget {
           width: 50,
           height: 50,
           padding: EdgeInsets.all(8),
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              color: color),
+          decoration: BoxDecoration(borderRadius: BorderRadius.circular(10), color: color),
           child: Image.asset(
             img,
           ),

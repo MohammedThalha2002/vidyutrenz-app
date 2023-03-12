@@ -1,5 +1,5 @@
 import 'dart:convert';
-
+import 'package:vidyutrenz_app/constants/credentials.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:http/http.dart' as http;
@@ -11,7 +11,7 @@ Future<int> UploadUserDetails({required Map<String, dynamic> userDetails}) async
   print(userDetails);
 
   try {
-    var url = Uri.parse("http://192.168.0.112:6060/add_user");
+    var url = Uri.parse('${cred.url}/add_user');
     var response = await http.post(
       url,
       body: jsonEncode(userDetails),

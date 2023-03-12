@@ -1,88 +1,107 @@
 import 'package:vidyutrenz_app/models/eventsExpansionModels.dart';
 
-/*
-OUTDOOR:
-1. Football Frenzy - https://chat.whatsapp.com/GTMyI7i8HT00Tgdh6dk6MW
-2. Battledore - https://chat.whatsapp.com/CkyfMA9QfMg7N6HlZhdgvW
-3. Pro Cricket - https://chat.whatsapp.com/LoPzgPLsdoNDGQUxgvCOea
-*/
 
 List<EventsExpansion> OutdoorEvents = [
   //1
   EventsExpansion(
-    title: 'PRO CRICKET',
+    title: 'VOLLEY',
     desc:
-        'Box cricket is a scaled-down form of cricket played in a box to showcase our on-field abilities. Take to the field and demonstrate your competitive spirit, and you may be rewarded handsomely.',
-    img: 'assets/events/pro-cricket.png',
+        "To be a better volleyball player than you've ever been. You have to do something you've never done - Pass it better, set it higher, hit it harder, smash it with all your might. Talent wins games, but teamwork and intelligence win championships. Use this amazing opportunity to showcase your team's potential to the sports circle.",
+    img: 'assets/events/volley.png',
     rules: [
-      "Entry fee 50 per head.",
-      "Each Team Must have 6 Members.",
-      "Overs will be Decided on that Day",
-      "Only Throw bowling is allowed.",
+      "Only college students are allowed to participate.",
+      "College ID is mandatory for all players.",
+      "A team can have 10 players (6 main & 4 subs).",
+      "Matches will be held on a knock-out basis.",
       "Umpire decision is Considered as the Final call.",
-      "No ABUSIVE Language will be encouraged, If it is found so. The team will simply be disqualified.",
-      "Disqualification will be at every round so be sure you win every round.",
-      " College ID card to be carried.",
+      "The teams should follow their allocated times strictly.",
+      "Qualifier rounds have 1 set (21 points) and semi-finals and finals will have 3 sets.",
+      "Participation Certificates will be provided to all the participants.",
     ],
     coordinators: [
-      "Avula Vishnu",
-      "7095963386",
-      "SudhaPraveen R",
-      "9177537341",
+      "ANBAZHAGAN S",
+      "9025435476",
+      "Santhosh R",
+      "8838307489",
     ],
-    caption: '',
-    url: 'https://forms.gle/kEvXRtRZV762My118',
+    caption: 'Get ready to throw your hands up and get your wings to fly high to reach the skies.',
+    url: 'https://docs.google.com/forms/d/e/1FAIpQLSdmTASZYWfk205hJpe_zwrppVL26GSkLTMUV4XGEY_5y9k0rQ/viewform?usp=sf_link',
     whatsApp: 'https://chat.whatsapp.com/LoPzgPLsdoNDGQUxgvCOea',
   ),
   //2
   EventsExpansion(
-    title: 'BATTLEDORE',
+    title: 'WITHIN THE BOUNDARIES',
     desc:
-        'Make the most of your opportunity. Leave it up to your racquet to speak for you! A fun and athletic activity with a few painless and simple rules that anybody can participate in and play.',
-    img: 'assets/events/battledore.png',
+        'Get ready to play the ultimate game of box cricket! Showcase your cricket skills, battle it out with the best. Don’t miss the chance to be part of the action-packed box cricket tournament! Register now and secure your spot in the game. ',
+    img: 'assets/events/pro-cricket.png',
     rules: [
-      "Entry fee 250.",
-      "Doubles Rules are,",
-      "Elimination will be done after each round(knockout matches).",
-      "Yonex Mavis 350 shuttles will be provided.",
-      "Rally Points will be awarded.",
-      "Participants should bring their own racquets.",
-      "Umpire decision is Considered as the Final call NO more arguments after the call are encouraged !",
-      "College ID card to be carried.",
+      "Each Team should have 8 players, including 2 substitutes.",
+      "Overs will be decided on the day of the match.",
+      "Only throw bowling is allowed.",
+      "The umpire's decision is final.",
+      "No abusive language will be encouraged. If such behavior is observed, the team will be disqualified.",
+      "Participation Certificates will be provided to all the participants.",
     ],
     coordinators: [
-      "G Pranay sai",
-      "9398470933",
-      "S Shwetha",
-      "7395989760",
+      "Sudha Praveen R",
+      "9177537341",
+      "Heubert Akash",
+      "8438515217",
     ],
-    caption:
-        'The world awaits your change. Grab the wonderful opportunity and make it perfect',
-    url: 'https://forms.gle/1PPk6w4JmRWZXTr2A',
+    caption: 'A perfect opportunity for all the cricket lovers out there! Chase your dreams as you chase the runs and defend your team. ',
+    url: 'https://docs.google.com/forms/d/e/1FAIpQLSc-oT7J9qNrAmZkA8ten4oZSaPVbUQ1rhgXu97UhXKaTP7lUQ/viewform?usp=sf_link',
     whatsApp: 'https://chat.whatsapp.com/CkyfMA9QfMg7N6HlZhdgvW',
   ),
   //3
   EventsExpansion(
-    title: 'FOOTBALLL-FRENZY',
+    title: 'FUTSAL',
     desc:
-        'The game in which skill takes precedence over brute strength and a sport that is more about passion and beauty than entertainment. 10 athletes face each other. The winner is one of the two teams of ten players who can put their best efforts to goal!',
+        "Calling out all the football fanatics out there. It's time to go head-to-head. Step into the field, feel the rush of adrenaline inside you, and win it all. Pull up your socks, lace up your shoes, and go for the shots. After all, what is life without goals?",
     img: 'assets/events/football-frenzy.png',
     rules: [
-      "Entry fee 300 per Team.",
-      "Each Team should have 5 players including the goalkeeper with two substitute players.",
-      "Throwing is not allowed for Away ball Goalkeeper should not kick over half ground.",
-      "Match timings will be initiated on that Day.",
-      "Only in case of a drawn match, penalty kicks will take place.",
-      "Referee’s decision will be considered as the final call.",
+      "Each team consists of 5+3 players, including a goalkeeper.",
+      "Throw is not allowed for the away ball and the goalkeeper should not kick over half-ground.",
+      "Match fixtures will be revealed on match day.",
+      "All players must wear a full kit.",
+      "In case of a draw, a penalty shootout will be conducted.",
+      "The referee's decision will be final.",
+      "Participation Certificates will be provided to all the participants",
     ],
     coordinators: [
-      "Mohammed Thalha MA",
-      "9894942686",
-      "Giriprashaath M",
-      "6369345296",
+      "Sam vinston",
+      "8531021339",
+      "Ram prasath",
+      "7397704994",
     ],
-    caption: '',
-    url: 'https://forms.gle/bijDBt7jYBSjq4BD9',
+    caption: 'Here is a call for the passionates of Football to show your athletic skills and pride for an edge-of-the-seat match.',
+    url: 'https://docs.google.com/forms/d/e/1FAIpQLScDd8FGohI-_akZFGJv-Aa1vRqeSsz_zCJI8v9s7Y6geTiaDA/viewform?usp=sf_link',
+    whatsApp: 'https://chat.whatsapp.com/GTMyI7i8HT00Tgdh6dk6MW',
+  ),
+//   //4
+  EventsExpansion(
+    title: 'SMASHZONE',
+    desc:
+        "We are thrilled to invite you to our upcoming badminton extravaganza! This is not your typical badminton tournament - we have crafted an event packed with excitement, entertainment, and sportsmanship.",
+    img: 'assets/events/battledore.png',
+    rules: [
+      "Each individual should bring his/her own racquet for the event. Shuttlecocks will be provided by the organizing team.",
+      "The tournament will be conducted in a knockout-based format, with each losing team/player being eliminated after each round.",
+      "The winning team/player will move on to the next round.",
+      "Points will be awarded based on the rally point system.",
+      "The referee/line umpire's decision is final and arguments will not be 	tolerated after the final decision is made.",
+      "All players are requested to behave in the spirit of sportsmanship and fair play in order to enjoy the game.",
+      "Players are also requested to carry their own items like water bottles, towels, etc.",
+      "Participation Certificates will be provided to all the participants",
+    ],
+    coordinators: [
+      "Krishna Kumar",
+      "9080504831",
+      "Sudharshini",
+      "82486 39843",
+    ],
+    caption:
+        "As you walk in here, build your confidence for a feather on your cap by making everyone else's shuttle feathers down. Show them your strength and courage in an exciting match ahead.",
+    url: 'https://docs.google.com/forms/d/e/1FAIpQLScAH5X-2cPybzNTAOnWvOOAl8D9dZ_Ll7vBjYu1FR0RcQFfmg/viewform?usp=sf_link',
     whatsApp: 'https://chat.whatsapp.com/GTMyI7i8HT00Tgdh6dk6MW',
   ),
 ];

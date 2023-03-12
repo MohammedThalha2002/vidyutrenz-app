@@ -2,7 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:staggered_grid_view_flutter/widgets/staggered_grid_view.dart';
 import 'package:staggered_grid_view_flutter/widgets/staggered_tile.dart';
-import 'package:vidyutrenz_app/colors.dart';
+import '../constants/colors.dart';
 import 'package:get/get.dart';
 import 'package:vidyutrenz_app/widgets/imageLoader-gallery.dart';
 import 'package:vidyutrenz_app/widgets/titles.dart';

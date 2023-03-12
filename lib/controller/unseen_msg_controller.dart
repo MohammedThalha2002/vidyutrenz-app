@@ -1,5 +1,5 @@
 import 'dart:convert';
-
+import 'package:vidyutrenz_app/constants/credentials.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
@@ -25,7 +25,7 @@ class UnseenMsgController extends GetxController {
     Map<String, String> userUID = {"user": user!.uid};
 
     try {
-      var url = Uri.parse("http://192.168.0.112:6060/seen-msg");
+      var url = Uri.parse("${cred.url}/seen-msg");
       var response = await http.post(
         url,
         body: jsonEncode(userUID),
@@ -45,11 +45,9 @@ class UnseenMsgController extends GetxController {
   }
 
   Future NumberOfProclaimDocs() async {
-    QuerySnapshot productCollection =
-        await FirebaseFirestore.instance.collection('Proclaims').get();
+    QuerySnapshot productCollection = await FirebaseFirestore.instance.collection('Proclaims').get();
     NumberOfProcliamDocuments.value = productCollection.size;
-    print("Number of Procliam Documents " +
-        NumberOfProcliamDocuments.value.toString());
+    print("Number of Procliam Documents " + NumberOfProcliamDocuments.value.toString());
     UnseenValue();
   }
 
@@ -60,11 +58,8 @@ class UnseenMsgController extends GetxController {
   }
 
   AssignTheValueOfSeenMsgToDocumentSize() async {
-    Map<String, dynamic> data = {
-      "user": user!.uid,
-      "seenMsg": NumberOfProcliamDocuments.value
-    };
-    var url = Uri.parse("http://192.168.0.112:6060/update-seen-msg");
+    Map<String, dynamic> data = {"user": user!.uid, "seenMsg": NumberOfProcliamDocuments.value};
+    var url = Uri.parse('${cred.url}/update-seen-msg');
     var response = await http.post(
       url,
       body: jsonEncode(data),

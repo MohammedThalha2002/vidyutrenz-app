@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:vidyutrenz_app/colors.dart';
+import 'package:vidyutrenz_app/constants/colors.dart';
 
 class CustomTextField extends StatefulWidget {
   final TextEditingController controller;

@@ -11,12 +11,11 @@ import 'package:vidyutrenz_app/pages/gallery.dart';
 import 'package:vidyutrenz_app/pages/homepage.dart';
 import 'package:vidyutrenz_app/pages/proclaims.dart';
 import 'package:vidyutrenz_app/pages/welcome_page.dart';
-import 'package:vidyutrenz_app/colors.dart';
+import 'package:vidyutrenz_app/constants/colors.dart';
 
 class DrawerItems extends StatefulWidget {
   final AdvancedDrawerController advancedDrawerController;
-  DrawerItems({Key? key, required this.advancedDrawerController})
-      : super(key: key);
+  DrawerItems({Key? key, required this.advancedDrawerController}) : super(key: key);
 
   @override
   State<DrawerItems> createState() => _DrawerItemsState();
@@ -147,25 +146,25 @@ class _DrawerItemsState extends State<DrawerItems> {
                   ),
                 ),
               ),
-              // ListTile(
-              //   onTap: () {
-              //     Get.to(
-              //       AdminHomePage(),
-              //       transition: Transition.native,
-              //       duration: Duration(milliseconds: 600),
-              //     );
-              //   },
-              //   leading: Icon(
-              //     FontAwesomeIcons.person,
-              //     color: Colors.white,
-              //   ),
-              //   title: Text(
-              //     'Admin',
-              //     style: TextStyle(
-              //       fontSize: 22,
-              //     ),
-              //   ),
-              // ),
+              ListTile(
+                onTap: () {
+                  Get.to(
+                    AdminHomePage(),
+                    transition: Transition.native,
+                    duration: Duration(milliseconds: 600),
+                  );
+                },
+                leading: Icon(
+                  FontAwesomeIcons.person,
+                  color: Colors.white,
+                ),
+                title: Text(
+                  'Admin',
+                  style: TextStyle(
+                    fontSize: 22,
+                  ),
+                ),
+              ),
               ListTile(
                 onTap: () {
                   showDialogToLogout();

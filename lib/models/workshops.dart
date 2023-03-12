@@ -1,3 +1,4 @@
+
 class Workshops {
   String title;
   List<String> outcomes;
@@ -20,112 +21,89 @@ class Workshops {
 List<Workshops> workshops = [
   //1
   Workshops(
-    title: "Workshop on IoT and Cloud Computing",
+    title: "IOT AND EMBEDDED SYSTEMS",
     outcomes: [
-      "Interface various analog and digital sensors to the ESP controller. ",
-      "Create things in AWS Platform.",
-      "Push the data to AWS IOT cloud.",
-      "Retrieve data from AWS cloud.",
-      "Build IOT Applications.",
+      "Know how to  Design, Code, and Build IOT products.",
+      "Learn to code using Arduino IDE.",
+      "Knowledge about how to work with Microcontrollers, Sensors, and Relays.",
+      "Learn how to connect to cloud IOT Platforms.",
     ],
-    url: 'https://forms.gle/dkG1kDM8EnLVkw5N9',
+    url: 'https://docs.google.com/forms/d/e/1FAIpQLScb1OaJDj9VjUMftWrsFARhWalgLreKz7A3shfkh2upMudfbQ/viewform?usp=sf_link',
     desc:
-        "IoT workshop at Vidyutrenz is the upgrade your resume needs the most, get insights into the IoT domain while working with various practical interfaces to complete your journey putting the world in a networks.",
+        "IoT and embedded systems control devices to connect and interact over the internet, transforming the way we live and work. They drive innovation across industries, enabling smarter homes, businesses, and cities. The future of IoT and embedded systems looks bright, with opportunities for continued growth and innovation.",
     coordinators: [
-      "Karthicck A",
-      "9789890411",
-      "Pavan",
-      "9962022697",
+      "Ranjith Kumar A",
+      "6374412610",
+      "Joseph Peter J",
+      "8870310990",
     ],
     img: 'assets/events/iot.png',
     whatsApp: 'https://chat.whatsapp.com/IBesiJTedziEi3XAf3EsHB',
   ),
   //2
   Workshops(
-    title: "Workshop on VLSI Design",
+    title: "BASICS OF MACHINE LEARNING AND MEDICAL IMAGE PROCESSING",
     outcomes: [
-      "Able to design Digital Circuits for particular applications.",
-      "Able to write a Verilog HDL Code for Digital Circuits.",
-      "Able to handle tools (EDA Playground).",
+      "Introduction to Machine Learning in Medical Image Processing.",
+      "Introduction to Image processing.",
+      "Use of Python for Image processing.",
+      "A basic project on Medical Image Processing.",
     ],
-    url: 'https://forms.gle/GVCaeSjbyZv191VT7',
+    url: 'https://docs.google.com/forms/d/e/1FAIpQLSegqH5f93C9Dgp_QdyyUxzaS31GbAszNlGDzhVcD3wcCbiycw/viewform?usp=sf_link',
     desc:
-        '''The aim of the workshop is to get a fundamental knowledge about Very large-scale integration (VLSI) .
-             The entire VLSI training program is designed in such a manner that candidates well understand the concepts and get good overview of the design requirements and also they will go through hands-on experience.''',
+        '''This workshop offers a one-shot introduction to medical image processing, starting from the basics. With a case study-based approach, attendees will have the opportunity to apply their learning in practical settings.
+         Additionally, participants will gain hands-on experience with machine learning and have the chance to work on a mini-project.''',
     coordinators: [
-      "Hari Narayanan B",
-      "9677844879",
-      "Hari V",
-      "6379204221",
+      "Ajaymalolan K V",
+      "8072335322",
+      "Swarshaa S",
+      "9148962377",
     ],
-    img: 'assets/events/vlsi-design.png',
+    img: 'assets/events/ml.png',
     whatsApp: 'https://chat.whatsapp.com/KMdkf5gsMM3C5FPKXYEO2U',
   ),
   //3
   Workshops(
-    title: "Workshop on Image Processing",
+    title: "MAKE YOUR PCB",
     outcomes: [
-      "Image processing fundamentals.",
-      "Features identification.",
-      "Implementation of supervised machine learning.",
-      "Implementation of unsupervised machine learning",
-      "Face recognition using SVM.",
-      "Image classification using neural networks.",
+      " Knowledge about KICAD software.",
+      "Experience to debug and analyze the circuit.",
+      "Understanding the working and manufacturing process of PCB.",
+      "Ability to design and create your own PCB.",
+      "An overall idea about the components used in PCB and their processes.",
     ],
-    url: 'https://forms.gle/d8RCgXE5GFqxoxDWA',
+    url: 'https://docs.google.com/forms/d/e/1FAIpQLSeJlSUoOSq-rCGvJ-wbVy4K3aXme1FpatZEak6UHetHtGEamg/viewform?usp=sf_link',
     desc:
-        "Image is the representation of viewable form of an object. Installing the unique ability of humans to analyse and recognize images is the intricate art of image processing. Learn this technology from scratch through 'Vidyutrendz Image processing workshop' getting a hands-on experience on machine learning.",
+        "PCBs (Printed Circuit Boards) are fundamental to the construction of electronic devices, providing a foundation for connecting and integrating electronic components. The electronic components are integrated into the PCB to design a functional circuit. Proper design and fabrication of PCBs is essential to ensure functionality, reliability, and cost-effectiveness in electronic devices.",
     coordinators: [
-      "Tenail Karthikeya",
-      "7095045039",
-      "Karthikeyan ES",
-      "9080879579",
+      "Sanjeev V",
+      "8940496469",
+      "Sriram R B",
+      "9486788449",
     ],
-    img: 'assets/events/image-processing.png',
+    img: 'assets/events/pcb.png',
     whatsApp: 'https://chat.whatsapp.com/C4iBbrsRTT6Fb7CwE1usP4',
   ),
   //4
   Workshops(
-    title: "Workshop on Network Garage",
+    title: "NETWORKING AND CYBER SECURITY",
     outcomes: [
-      "Familiarize with the working of basic network devices and protocols.",
-      "Understand about the routing of packets in internet.",
+      "Get to know about Network Devices And Protocols.",
+      "Understand the process of Routing packets across the internet.",
       "Configure devices in Cisco packet tracer.",
       "Familiar about WLAN and WIFI attacks.",
-      "Understand about basic network attacks.",
+      "Awareness about Basic Network Attacks.",
     ],
-    url: 'https://forms.gle/V9xC5mcCgXM1BS1o6',
+    url: 'https://docs.google.com/forms/d/e/1FAIpQLSd-gHjuCW_9P6wmGvk9PoDaUgkj0sjb11ayTSTyHb-sKdoWcA/viewform?usp=sf_link',
     desc:
-        'The goal of this course is to provide a foundational view of communication networks.The principles upon which the Internet and other computer networks are built.How those principles translate into deployed protocols and to have hands-on experience solving challenging problems with network protocols.',
+        'Networking refers to the communication between devices or systems, enabling the sharing of information and resources. Cybersecurity involves protecting these networks from unauthorized access, data breaches, and cyber attacks. With the increasing use of technology in our daily lives, the importance of secure and reliable networks has become critical. Understanding both networking and cybersecurity is essential for protecting personal and business information.',
     coordinators: [
-      "Gokul R",
-      "9688093588",
-      "Sam Joel P",
-      "9176344166",
+      "Saminathan S",
+      "9360964582",
+      "Hemaranjini M",
+      "8098003617",
     ],
     img: 'assets/events/network-garage.png',
     whatsApp: 'https://chat.whatsapp.com/E0VGdT178iw91uzvinfFTe',
   ),
-  //5
-  Workshops(
-    title: 'Workshop -startup 101-unlock by techiegen',
-    outcomes: [
-      "Understand the function of the entrepreneur",
-      "Able to know how to approach the problem",
-      "To have a clear knowledge about market trends",
-      "To build Minimum viable product",
-      "To have business approach",
-    ],
-    url: 'https://forms.gle/83KyNWVp6a7bGGZX7',
-    desc:
-        "The true entrepreneur is a doer and not a dreamer. Entrepreneurship is a skillset where creativity and innovation are the key for long term prosperity. Here we present you a wonderful opportunity to expertise and involve in the intensive discussion of Entrepreneurship conducted by Techigen who makes learning fun with memes and Instagram pages.",
-    coordinators: [
-      "N Sri Shamile",
-      "8778239898",
-      "P KRISHNA VAMSI",
-      "9398203030",
-    ],
-    img: 'assets/events/startup-101.png',
-    whatsApp: 'https://chat.whatsapp.com/GxDA11L5Z951RonIDVAsSf',
-  )
 ];

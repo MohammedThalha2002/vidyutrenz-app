@@ -58,7 +58,7 @@ dev_dependencies:
 
 flutter_native_splash:
   image: assets/logo_app-launch.png
-  color: "#ffffff"
+  color: "#191927"
 
   flutter_lints: ^1.0.0
 

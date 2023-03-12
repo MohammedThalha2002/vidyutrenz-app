@@ -2,7 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:vidyutrenz_app/auth/google_sign_in.dart';
 import 'package:vidyutrenz_app/backend/user_details_upload.dart';
-import 'package:vidyutrenz_app/colors.dart';
+import 'package:vidyutrenz_app/constants/colors.dart';
 import 'package:get/get.dart';
 import 'package:vidyutrenz_app/pages/homepage.dart';
 import 'package:vidyutrenz_app/widgets/custom_textfields.dart';

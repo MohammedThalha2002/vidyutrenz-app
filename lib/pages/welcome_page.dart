@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:vidyutrenz_app/colors.dart';
+import 'package:vidyutrenz_app/constants/colors.dart';
 import 'package:vidyutrenz_app/pages/signup_page.dart';
 import 'homepage.dart';
 
@@ -54,18 +54,14 @@ class _WelcomePageState extends State<WelcomePage> {
                       child: Container(
                         padding: EdgeInsets.all(12),
                         width: size.width * 0.9,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(30),
-                            color: Colors.blue,
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black,
-                                spreadRadius: 2,
-                                blurRadius: 6,
-                                offset:
-                                    Offset(1, 2), // changes position of shadow
-                              ),
-                            ]),
+                        decoration: BoxDecoration(borderRadius: BorderRadius.circular(30), color: Colors.blue, boxShadow: [
+                          BoxShadow(
+                            color: Colors.black,
+                            spreadRadius: 2,
+                            blurRadius: 6,
+                            offset: Offset(1, 2), // changes position of shadow
+                          ),
+                        ]),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [

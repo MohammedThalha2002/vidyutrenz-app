@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 import 'package:vidyutrenz_app/controller/unseen_msg_controller.dart';
 import 'package:vidyutrenz_app/widgets/titles.dart';
-import 'package:vidyutrenz_app/colors.dart';
+import 'package:vidyutrenz_app/constants/colors.dart';
 
 class Proclaims extends StatefulWidget {
   const Proclaims({Key? key}) : super(key: key);
@@ -14,10 +14,7 @@ class Proclaims extends StatefulWidget {
 }
 
 class _ProclaimsState extends State<Proclaims> {
-  final ProclaimsStream = FirebaseFirestore.instance
-      .collection("Proclaims")
-      .orderBy('date_time')
-      .snapshots();
+  final ProclaimsStream = FirebaseFirestore.instance.collection("Proclaims").orderBy('date_time').snapshots();
   UnseenMsgController unseenMsgController = Get.put(UnseenMsgController());
   @override
   void initState() {
@@ -57,8 +54,7 @@ class _ProclaimsState extends State<Proclaims> {
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
-          child:
-              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             TitleWidget(
               img: 'assets/proclaims_1.png',
               title: 'PROCLAIMS',
@@ -71,6 +67,7 @@ class _ProclaimsState extends State<Proclaims> {
             StreamBuilder(
               stream: ProclaimsStream,
               builder: ((context, AsyncSnapshot<QuerySnapshot> snapshot) {
+                print("PROCLAIMS LENGTH : " + snapshot.data!.docs.length.toString());
                 if (snapshot.hasError) {
                   return Text('Something went wrong');
                 }
@@ -130,17 +127,14 @@ class messageModel extends StatelessWidget {
       padding: const EdgeInsets.only(bottom: 10),
       child: Container(
         width: size.width,
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20),
-            color: colors.containerColor,
-            boxShadow: [
-              BoxShadow(
-                color: Colors.black.withOpacity(0.2),
-                spreadRadius: 1,
-                blurRadius: 4,
-                offset: Offset(4, 4), // changes position of shadow
-              ),
-            ]),
+        decoration: BoxDecoration(borderRadius: BorderRadius.circular(20), color: colors.containerColor, boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.2),
+            spreadRadius: 1,
+            blurRadius: 4,
+            offset: Offset(4, 4), // changes position of shadow
+          ),
+        ]),
         child: Padding(
           padding: const EdgeInsets.all(10),
           child: Column(

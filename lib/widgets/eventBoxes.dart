@@ -3,7 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:vidyutrenz_app/colors.dart';
+import 'package:vidyutrenz_app/constants/colors.dart';
 import 'package:vidyutrenz_app/controller/unseen_msg_controller.dart';
 
 class EventBox extends StatefulWidget {
@@ -36,8 +36,7 @@ class _EventBoxState extends State<EventBox> {
     // TODO: implement initState
     super.initState();
     print(
-      "Unseen value in the initstate of the HomePage " +
-          unseenMsgController.Unseen.value.toString(),
+      "Unseen value in the initstate of the HomePage " + unseenMsgController.Unseen.value.toString(),
     );
   }
 
@@ -60,17 +59,14 @@ class _EventBoxState extends State<EventBox> {
           right: 14,
           bottom: 12,
         ),
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20),
-            color: colors.containerColor,
-            boxShadow: [
-              BoxShadow(
-                color: Colors.black.withOpacity(0.2),
-                spreadRadius: 1,
-                blurRadius: 4,
-                offset: Offset(4, 4), // changes position of shadow
-              ),
-            ]),
+        decoration: BoxDecoration(borderRadius: BorderRadius.circular(20), color: colors.containerColor, boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.2),
+            spreadRadius: 1,
+            blurRadius: 4,
+            offset: Offset(4, 4), // changes position of shadow
+          ),
+        ]),
         child: widget.index != 2
             ? Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -105,8 +101,7 @@ class _EventBoxState extends State<EventBox> {
                       fontSize: 12,
                     ),
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end, children: [
+                  Row(mainAxisAlignment: MainAxisAlignment.end, children: [
                     InkWell(
                       onTap: () {
                         Get.to(
@@ -157,20 +152,18 @@ class _EventBoxState extends State<EventBox> {
                             fontSize: 12,
                           ),
                         ),
-                        Row(
-                            mainAxisAlignment: MainAxisAlignment.end,
-                            children: [
-                              InkWell(
-                                onTap: () {
-                                  Get.to(
-                                    widget.page,
-                                    transition: Transition.native,
-                                    duration: Duration(milliseconds: 600),
-                                  );
-                                },
-                                child: Image.asset('assets/for_arrow.png'),
-                              )
-                            ]),
+                        Row(mainAxisAlignment: MainAxisAlignment.end, children: [
+                          InkWell(
+                            onTap: () {
+                              Get.to(
+                                widget.page,
+                                transition: Transition.native,
+                                duration: Duration(milliseconds: 600),
+                              );
+                            },
+                            child: Image.asset('assets/for_arrow.png'),
+                          )
+                        ]),
                       ],
                     ),
                     unseenMsgController.Unseen.value != 0

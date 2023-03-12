@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:vidyutrenz_app/colors.dart';
+import 'package:vidyutrenz_app/constants/colors.dart';
 import 'package:vidyutrenz_app/controller/admin_page_controller.dart';
 import 'package:vidyutrenz_app/pages/proclaims.dart';
 
@@ -66,7 +66,6 @@ Widget AdminPageDesicionMaker(Size size) {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  
                   Text(
                     data['feeddback'],
                     style: TextStyle(
@@ -74,7 +73,6 @@ Widget AdminPageDesicionMaker(Size size) {
                       fontSize: 16,
                     ),
                   ),
-                  
                   Text(
                     data['rate'].toString(),
                     style: TextStyle(
@@ -82,7 +80,6 @@ Widget AdminPageDesicionMaker(Size size) {
                       fontSize: 16,
                     ),
                   ),
-                  
                 ],
               ),
             );

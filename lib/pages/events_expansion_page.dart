@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:url_launcher/url_launcher_string.dart';
-import 'package:vidyutrenz_app/colors.dart';
+import 'package:vidyutrenz_app/constants/colors.dart';
 import 'package:vidyutrenz_app/controller/event_selector_controller.dart';
 import 'package:vidyutrenz_app/widgets/bullet_points.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -202,28 +202,28 @@ class EventsExpansionPage extends StatelessWidget {
                     ],
                   ),
                 ),
-                Column(
-                  children: [
-                    Text(
-                      "JOIN",
-                      style: TextStyle(
-                        fontSize: 18,
-                        color: Colors.white,
-                        fontWeight: FontWeight.w400,
-                      ),
-                    ),
-                    InkWell(
-                      onTap: () {
-                        _launchURL(whatsApp);
-                      },
-                      child: Image.asset(
-                        "assets/whatsapp.png",
-                        width: 40,
-                        height: 40,
-                      ),
-                    ),
-                  ],
-                ),
+                // Column(
+                //   children: [
+                //     Text(
+                //       "JOIN",
+                //       style: TextStyle(
+                //         fontSize: 18,
+                //         color: Colors.white,
+                //         fontWeight: FontWeight.w400,
+                //       ),
+                //     ),
+                //     InkWell(
+                //       onTap: () {
+                //         _launchURL(whatsApp);
+                //       },
+                //       child: Image.asset(
+                //         "assets/whatsapp.png",
+                //         width: 40,
+                //         height: 40,
+                //       ),
+                //     ),
+                //   ],
+                // ),
               ],
             ),
             SizedBox(

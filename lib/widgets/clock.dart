@@ -1,6 +1,6 @@
 import 'package:analog_clock/analog_clock.dart';
 import 'package:flutter/material.dart';
-import 'package:vidyutrenz_app/colors.dart';
+import 'package:vidyutrenz_app/constants/colors.dart';
 
 class Analogclock extends StatefulWidget {
   const Analogclock({Key? key}) : super(key: key);

@@ -12,12 +12,10 @@ import 'package:vidyutrenz_app/pages/homepage.dart';
 import 'package:vidyutrenz_app/pages/proclaims.dart';
 import 'package:vidyutrenz_app/pages/welcome_page.dart';
 
-final GlobalKey<NavigatorState> navigatorKey =
-    GlobalKey(debugLabel: "Main Navigator");
+final GlobalKey<NavigatorState> navigatorKey = GlobalKey(debugLabel: "Main Navigator");
 
 late String routeToGo = '/';
-final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
-    FlutterLocalNotificationsPlugin();
+final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();
 String? payload;
 
 Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
@@ -61,19 +59,15 @@ Future main() async {
 
   // assign channel (required after android 8)
   await flutterLocalNotificationsPlugin
-      .resolvePlatformSpecificImplementation<
-          AndroidFlutterLocalNotificationsPlugin>()
+      .resolvePlatformSpecificImplementation<AndroidFlutterLocalNotificationsPlugin>()
       ?.createNotificationChannel(channel);
 
   // initialize notification for android
-  var initialzationSettingsAndroid =
-      AndroidInitializationSettings('@mipmap/ic_launcher');
-  var initializationSettings =
-      InitializationSettings(android: initialzationSettingsAndroid);
+  var initialzationSettingsAndroid = AndroidInitializationSettings('@mipmap/ic_launcher');
+  var initializationSettings = InitializationSettings(android: initialzationSettingsAndroid);
   flutterLocalNotificationsPlugin.initialize(initializationSettings);
 
-  final NotificationAppLaunchDetails? notificationAppLaunchDetails =
-      await flutterLocalNotificationsPlugin.getNotificationAppLaunchDetails();
+  final NotificationAppLaunchDetails? notificationAppLaunchDetails = await flutterLocalNotificationsPlugin.getNotificationAppLaunchDetails();
 
   print('payload=');
   payload = notificationAppLaunchDetails!.payload;
@@ -87,8 +81,7 @@ Future main() async {
     // navigatorKey.currentState?.pushNamed('/second');
   }
 
-  await flutterLocalNotificationsPlugin.initialize(initializationSettings,
-      onSelectNotification: selectNotification);
+  await flutterLocalNotificationsPlugin.initialize(initializationSettings, onSelectNotification: selectNotification);
   // When msg is opened
   FirebaseMessaging.onMessageOpenedApp.listen((RemoteMessage message) async {
     print(message.notification!.body);
@@ -104,8 +97,7 @@ Future main() async {
   });
 
   //Do this in main.dart
-  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
-      .then((_) {
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]).then((_) {
     runApp(MyApp());
   });
 }
@@ -121,7 +113,7 @@ class _MyAppState extends State<MyApp> {
   late String token;
   getToken() async {
     token = (await FirebaseMessaging.instance.getToken())!;
-    print(token);
+    print("FCM TOKEN : " + token);
   }
 
   @override
